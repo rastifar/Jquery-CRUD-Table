@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+    <script src="./assets/jquey/jquery-3.6.0.js"></script>
+    <script src="./1.js"></script>
+    <title>1</title>
+    <style>
+        .btn-success,.bg-success{
+            background-color: #4cb050 !important;
+        }
+        .btn-danger{
+            background-color: #dc3645;
+        }
+        .btn-primary{
+            background-color: #007aff;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5 py-4 ">
+      <!-- <div > -->
+      <button id="addRow" class="btn btn-success py-1 my-4" type="button">
+          <img src="./assets/pic/icons8-plus-+-24.png" >
+        Add row
+      </button>
+      <table class=" table table-hover  border rounded ">
+        <thead class="bg-success text-light">
+          <tr>
+            <th class="border" scope="col">Action</th>
+            <th class="border" scope="col">Number</th>
+            <th class="border" scope="col">Type</th>
+            <th class="border" scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <th  scope="row">
+                <div class="d-flex h-25">
+                <button class="btn btn-danger me-4 my-1 py-1 delete" style="width: 40%;">
+                    <img src="./assets/pic/icons8-delete-24.png" > Delete</button>
+                <button class="btn btn-primary  me-4 my-1 py-1 clone" style="width: 40%;">
+                    <img src="./assets/pic/icons8-clone-64.png" style="width: 25px; height: 25px;"> Clone</button>
+                </div>
+                </th>
+            <td class="h-25">
+                <input class="w-100 py-1 my-1" type="text"  id="NumberInput">
+            </td>
+            <td class="h-25">
+                <input class="w-100 py-1 my-1" type="text" id="TypeInput">
+            </td class="h-25">
+            <td class="radioBtn" >
+                <div class="d-flex py-1">
+                <div class="form-check me-2 py-1">
+                    <input class="form-check-input" type="radio" name="status" id="NewRadio" value="New" >
+                    <label class="form-check-label" for="NewRadio">
+                    New
+                    </label>
+                  </div>
+                  <div class="form-check me-2 py-1">
+                    <input class="form-check-input" type="radio" name="status" value="InProgress" id="InprogressRadio" >
+                    <label class="form-check-label" for="InprogressRadio">
+                     In progress
+                    </label>
+                  </div>
+                  <div class="form-check me-2 py-1">
+                    <input class="form-check-input" type="radio" name="status" value="Confirm" id="confirmedRadio" >
+                    <label class="form-check-label" for="confirmedRadio">
+                        confirmed
+                    </label>
+                  </div>   
+                </div>              
+            </td>       
+    </tr>   
+  
+        </tbody>
+      </table>  
+    <!-- </div> -->
+    <div >All rows numbers : <span class="rowInfo"></span></div>
+    <div >Not confirmed rows number : <span class="notConfirmedRowInfo"></span></div>
+    </div>
+  </body>
+</html>
+
+<!-- git push -u origin main -->
